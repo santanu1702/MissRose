@@ -1,0 +1,24 @@
+services:
+  - type: web
+    name: miss-rose-v1-pro-bot
+    env: python
+    plan: free
+    buildCommand: "pip install -r requirements.txt"
+    startCommand: "python3 -m tg_bot"
+    envVars:
+      - key: TOKEN
+        sync: false
+      - key: OWNER_ID
+        sync: false
+      - key: OWNER_USERNAME
+        sync: false
+      - key: DATABASE_URL
+        sync: false
+      - key: BOT_USERNAME
+        value: MissRoseV1Pro_Bot
+      - key: UPDATE_CHANNEL
+        value: BotBaseOfficial
+      - key: WEBHOOK
+        value: "False"
+      - key: PYTHON_VERSION
+        value: 3.10.13
